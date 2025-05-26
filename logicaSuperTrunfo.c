@@ -133,5 +133,85 @@ int main() {
     printf("Empate! Ambas as cidades têm a mesma população.\n");
 }
 
+int opcao;
+
+    printf("Menu de Comparação de Cartas\n");
+    printf("Escolha o atributo para comparar:\n");
+    printf("1. População\n");
+    printf("2. Área\n");
+    printf("3. PIB\n");
+    printf("4. Número de Pontos Turísticos\n");
+    printf("5. Densidade Populacional\n");
+    printf("0. Sair\n");
+    printf("Opção: ");
+    scanf("%d", &opcao);
+
+    switch(opcao) {
+    case 1:
+    printf("\nComparando População:\n");
+    printf("%s: %d habitantes\n", nomeCidade1, populacao1);
+    printf("%s: %d habitantes\n", nomeCidade2, populacao2);
+    if (populacao1 > populacao2)
+    printf("Vencedor: %s\n", nomeCidade1);
+    else if (populacao2 > populacao1)
+    printf("Vencedor: %s\n", nomeCidade2);
+    else
+    printf("Empate!\n");
+    break;
+
+    case 2:
+    printf("\nComparando Área:\n");
+    printf("%s: %.2f km²\n", nomeCidade1, area1);
+    printf("%s: %.2f km²\n", nomeCidade2, area2);
+    if (area1 > area2)
+    printf("Vencedor: %s\n", nomeCidade1);
+    else if (area2 > area1)
+    printf("Vencedor: %s\n", nomeCidade2);
+    else
+    printf("Empate!\n");
+    break;
+
+    case 3:
+    printf("\nComparando PIB:\n");
+    printf("%s: %.2f bilhões de reais\n", nomeCidade1, pib1);
+    printf("%s: %.2f bilhões de reais\n", nomeCidade2, pib2);
+    if (pib1 > pib2)
+    printf("Vencedor: %s\n", nomeCidade1);
+    else if (pib2 > pib1)
+    printf("Vencedor: %s\n", nomeCidade2);
+    else
+    printf("Empate!\n");
+    break;
+
+    case 4:
+    printf("\nComparando Pontos Turísticos:\n");
+    printf("%s: %d pontos turísticos\n", nomeCidade1, pontosTuristicos1);
+    printf("%s: %d pontos turísticos\n", nomeCidade2, pontosTuristicos2);
+    if (pontosTuristicos1 > pontosTuristicos2)
+    printf("Vencedor: %s\n", nomeCidade1);
+    else if (pontosTuristicos2 > pontosTuristicos1)
+    printf("Vencedor: %s\n", nomeCidade2);
+    else
+    printf("Empate!\n");
+    break;
+
+    case 5:
+    printf("\nComparando Densidade Populacional:\n");
+    printf("%s: %.2f hab/km²\n", nomeCidade1, densidade1);
+    printf("%s: %.2f hab/km²\n", nomeCidade2, densidade2);
+    if (densidade1 > densidade2)
+    printf("Vencedor: %s\n", nomeCidade1);
+    else if (densidade2 > densidade1)
+    printf("Vencedor: %s\n", nomeCidade2);
+    else
+    printf("Empate!\n");
+    break;
+
+    default:
+    if (opcao != 0)
+    printf("Opção inválida!\n");
+    }
+
+
     return 0;
 }
